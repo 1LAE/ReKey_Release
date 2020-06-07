@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Startmenu.qml</file>
+        <file>Toolbar.qml</file>
+        <file>Editor.qml</file>
+        <file>Frame.qml</file>
+        <file>Sliders.qml</file>
+        <file>Monitors.qml</file>
+        <file>Tools.qml</file>
+        <file>RenderWindow.qml</file>
+    </qresource>
+    <qresource prefix="/files"/>
+</RCC>
