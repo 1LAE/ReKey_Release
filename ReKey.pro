@@ -35,7 +35,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     helper.h
 
-INCLUDEPATH += /usr/local/include/
+INCLUDEPATH += /usr/include/opencv4
 
 LIBS += -lopencv_core \
         -lopencv_imgproc \

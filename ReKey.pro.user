@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.12.0, 2020-06-07T01:57:39. -->
+<!-- Written by QtCreator 4.12.0, 2020-06-07T23:27:15. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -314,8 +314,9 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/ermvov/Docs/bos2/lab11/ReKey/ReKey.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/ermvov/Docs/bos2/lab11/ReKey/ReKey.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ReKey2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/ermvov/Docs/bos2/lab11/ReKey_Release/ReKey.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/ermvov/Docs/bos2/lab11/ReKey_Release/ReKey.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>
