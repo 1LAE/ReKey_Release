@@ -1,3 +1,6 @@
+/* Окошко где есть вьюпорт
+*/
+
 import QtQuick 2.12
 import QtQuick.Window 2.3
 import QtQuick.Controls 2.5
@@ -38,15 +41,15 @@ Window {
 
     function init(){
         bg_color.running = true
-        monitors.f_alpha = "file:../ReKey/template.jpg"
-        monitors.f_source = "file:../ReKey/template.jpg"
+        monitors.f_alpha = "file:../ReKey_Release/template.jpg"
+        monitors.f_source = "file:../ReKey_Release/template.jpg"
     }       
 
     function load_image() {       
         monitors.f_alpha = ""
         monitors.f_source = ""
-        monitors.f_alpha = "file:/home/ermvov/Docs/bos2/lab11/ReKey/image_alpha.jpg"
-        monitors.f_source = "file:/home/ermvov/Docs/bos2/lab11/ReKey/image.jpg"
+        monitors.f_alpha = "file:../ReKey_Release/image_alpha.jpg"
+        monitors.f_source = "file:../ReKey_Release/image.jpg"
         //console.log(qsTr(monitors.f_source))
     }
 

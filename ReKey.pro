@@ -1,4 +1,4 @@
-QT += quick multimedia widgets gui
+QT += quick multimedia gui
 
 CONFIG += c++11
 
@@ -35,10 +35,11 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     helper.h
 
-INCLUDEPATH += /usr/include/opencv4
+INCLUDEPATH += /usr/local/include/opencv4
 
 LIBS += -lopencv_core \
         -lopencv_imgproc \
         -lopencv_imgcodecs \
+        -lopencv_video \
         -lopencv_videoio
 

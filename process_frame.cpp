@@ -1,3 +1,8 @@
+/* process_frame.cpp
+ * Обработка отдельного кадра - применеие заданного фильтра
+ * */
+
+
 #include <opencv2/core.hpp>
 #include <opencv2/opencv.hpp>
 #include <opencv2/videoio.hpp>
@@ -12,8 +17,8 @@ void Helper::process(Mat* frame, HSV hsv, int hue, int sat, int val, int ai){
     HSV f_hsv;
     RGB rgb;
     bool flag = false;
-    if(ai > 0){
-        ai = (ai / 20 * 2) + 1;
+    if(ai > 0) {
+        ai = (ai / 30 * 2) + 1;
         flag = true;
     }
 

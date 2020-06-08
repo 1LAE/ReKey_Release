@@ -1,3 +1,5 @@
+/* "Красивая" анимация запуска программы */
+
 import QtQuick 2.0
 
 Rectangle {
@@ -15,13 +17,13 @@ Rectangle {
         id: st_text
         color: "#09f029"
 
-        text: qsTr("KeyIt!")
+        text: qsTr("Key It!")
         font.italic: true
         font.bold: true
         font.pixelSize: w.height / 4
         x: (w.width  / 2) - (st_text.width  / 2)
         y: (w.height / 2) - (st_text.height / 2)
-        font.family: "Courier"
+        font.family: "Tahoma"
         horizontalAlignment: Text.AlignHCenter
     }
 }

@@ -1,3 +1,11 @@
+/* convert.cpp
+ * Файл для работы с цветами пикселов
+ * Функции:
+ * convert: RGB -> HSV
+ * toRGB: QString -> RGB
+ * */
+
+
 #include <QString>
 #include <string>
 #include <iostream>
@@ -20,6 +28,7 @@ HSV Helper::convert(RGB rgb){
     minimum = std::min(b,g);
     minimum = std::max(minimum, r);
 
+    /* Находим оттенок */
     if(maximum == minimum){
         hsv.V = 0;
     } else if(maximum == r){
@@ -34,18 +43,21 @@ HSV Helper::convert(RGB rgb){
         hsv.H = 60 * (r - g) / (maximum - minimum) + 240;
     }
 
+    /* Яркость */
     if(maximum == 0){
         hsv.S = 0;
     } else {
         hsv.S = 1.0 - (minimum / maximum);
     }
 
+    /* Насыщенность */
     hsv.V = maximum;
 
     return hsv;
 }
 
 RGB Helper::toRGB(QString color){
+    //#ffffff
 
     RGB rgb;
     QString buf;    

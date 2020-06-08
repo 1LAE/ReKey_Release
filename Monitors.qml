@@ -1,3 +1,5 @@
+/* Layout для наших мониторов */
+
 import QtQuick 2.0
 
 Item {

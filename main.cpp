@@ -1,3 +1,8 @@
+/* main.cpp
+ * Основной файл программы
+ * */
+
+
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>

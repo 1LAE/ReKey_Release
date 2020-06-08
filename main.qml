@@ -1,3 +1,5 @@
+/* Главный файл, отсюда вызывается все остальное */
+
 import QtQuick 2.9
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.3

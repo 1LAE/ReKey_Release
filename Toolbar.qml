@@ -1,10 +1,12 @@
+/* Кнопки главного экрана */
+
 import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.5
+import QtQuick.Dialogs 1.2
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Controls.Material 2.3
-
 
 
 Item {
@@ -48,7 +50,8 @@ Item {
                 font.family: "Arial"
             }
             onReleased: {                
-                openFile.visible = true
+//                openFile.visible = true
+                fileDialog.visible = true
             }
         }
 
@@ -152,64 +155,87 @@ Item {
     }
 
 
-    Window {
-        id: openFile
-        width: 300
-        height: 100
-        x: 400
-        y: 300
-        title: "Open file"
+    FileDialog {
+
+        id: fileDialog
+
+        width: 1000
+        height: 450
         visible: false
-
-        Rectangle {
-            id: bg
-            anchors.fill: parent
-            color: "#1d1d1d"
+        objectName: "Open file"
+        title: "Select video file"
+        folder: shortcuts.home
+        sidebarVisible : true
+        nameFilters: "Video files (*.mp4)"
+        onAccepted: {
+            tb.loaded = helper.load(fileDialog.fileUrl)
+            //console.log(fileDialog.fileUrl)
+            close()
         }
 
-        TextField {
-            id: tf
-            x: parent.width / 2 - width / 2
-            y: 20            
-            placeholderText: "Enter absolute file path"
-            //text: ""
-            text: ""
-            width: 270
-            height: 30
-
-        }
-
-        Button {
-            id: bt
-            width: 150
-            height: 30
-            x: parent.width / 2 - width / 2
-            y: 60          
-
-            background: Rectangle {
-                anchors.fill: parent
-                color: parent.pressed ? "#101010" : "#303030"
-                border.color: "#0cfe00"
-                border.width: 1
-                radius: 5
-
-            }
-
-            Text {
-                anchors.fill: parent
-                text: "Done"
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
-                color: "#0cfe00"
-                font.italic: true
-                font.pixelSize: 20
-                font.family: "Arial"
-            }
-
-            onReleased: {
-                openFile.close()
-                tb.loaded = helper.load(qsTr(tf.text))
-            }
+        onRejected: {
+         close()
         }
     }
+
+//    Window {
+//        id: openFile
+//        width: 300
+//        height: 100
+//        x: 400
+//        y: 300
+//        title: "Open file"
+//        visible: false
+
+//        Rectangle {
+//            id: bg
+//            anchors.fill: parent
+//            color: "#1d1d1d"
+//        }
+
+//        TextField {
+//            id: tf
+//            x: parent.width / 2 - width / 2
+//            y: 20
+//            placeholderText: "Enter absolute file path"
+//            //text: ""
+//            text: ""
+//            width: 270
+//            height: 30
+
+//        }
+
+//        Button {
+//            id: bt
+//            width: 150
+//            height: 30
+//            x: parent.width / 2 - width / 2
+//            y: 60
+
+//            background: Rectangle {
+//                anchors.fill: parent
+//                color: parent.pressed ? "#101010" : "#303030"
+//                border.color: "#0cfe00"
+//                border.width: 1
+//                radius: 5
+
+//            }
+
+//            Text {
+//                anchors.fill: parent
+//                text: "Done"
+//                verticalAlignment: Text.AlignVCenter
+//                horizontalAlignment: Text.AlignHCenter
+//                color: "#0cfe00"
+//                font.italic: true
+//                font.pixelSize: 20
+//                font.family: "Arial"
+//            }
+
+//            onReleased: {
+//                openFile.close()
+//                tb.loaded = helper.load(qsTr(tf.text))
+//            }
+//        }
+//    }
 }
