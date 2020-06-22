@@ -5,6 +5,10 @@ import QtQuick 2.0
 Rectangle {
     id: startmenu
 
+    function init(){
+        st_coloranim.running = true
+    }
+
     ColorAnimation on color {
         id: st_coloranim
         from: "white"
@@ -17,7 +21,7 @@ Rectangle {
         id: st_text
         color: "#09f029"
 
-        text: qsTr("Key It!")
+        text: qsTr("Re Key!")
         font.italic: true
         font.bold: true
         font.pixelSize: w.height / 4

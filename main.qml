@@ -24,6 +24,7 @@ Window {
     title: qsTr("ReKey")
 
     Startmenu {
+        id: start
         anchors.fill: parent
         visible: true
     }
@@ -39,18 +40,19 @@ Window {
             editor.init()
         }
 
-        onRender: {
-            rndr_window.visible = true
-            rndr_window.init()            
+        onRender: {            
             editor.visible = false
-            w.visible = false
-            rndr_window.done = helper.render(
-                        editor.key,
-                        editor.hue,
-                        editor.sat,
-                        editor.br,
-                        editor.ai
-                        )
+            toolbar.visible = false
+            rndr_window.visible = true
+            rndr_window.init()
+//            rndr_window.done = true
+//            rndr_window.done = helper.render(
+//                        editor.key,
+//                        editor.hue,
+//                        editor.sat,
+//                        editor.br,
+//                        editor.ai
+//                        )
 
             //console.log(editor.key, editor.hue, editor.sat, editor.br, editor.ai)
 
@@ -64,9 +66,12 @@ Window {
 
     RenderWindow {
         id: rndr_window       
+        anchors.fill: parent
         visible: false
         onDonee: {
-            w.visible = true
+            toolbar.visible = true
+            visible = false
+            start.init()
         }
     }         
 }
