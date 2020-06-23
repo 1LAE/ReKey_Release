@@ -42,9 +42,9 @@ void Helper::process(Mat* frame, HSV hsv, int hue, int sat, int val, int ai){
                 if(f_hsv.V <= hsv.V + ((float)val / 100) && f_hsv.V > hsv.V - ((float)val /100)){
                     if( top >= bottom ? ( f_hsv.H <= top && f_hsv.H > bottom ) : ( f_hsv.H <= top || f_hsv.H > bottom )){
 
-                                frame->at<Vec3b>(row, col)[0] = (unsigned short)round(f_hsv.V/3*255*2) + (unsigned short)round(f_hsv.S/3*255);
-                                frame->at<Vec3b>(row, col)[1] = (unsigned short)round(f_hsv.V/3*255*2) + (unsigned short)round(f_hsv.S/3*255);
-                                frame->at<Vec3b>(row, col)[2] = (unsigned short)round(f_hsv.V/3*255*2) + (unsigned short)round(f_hsv.S/3*255);
+                                frame->at<Vec3b>(row, col)[0] = (unsigned short)round(f_hsv.V/2*255) + (unsigned short)round(f_hsv.S/2*255);
+                                frame->at<Vec3b>(row, col)[1] = (unsigned short)round(f_hsv.V/2*255) + (unsigned short)round(f_hsv.S/2*255);
+                                frame->at<Vec3b>(row, col)[2] = (unsigned short)round(f_hsv.V/2*255) + (unsigned short)round(f_hsv.S/2*255);
                                 continue;
 
                     }
